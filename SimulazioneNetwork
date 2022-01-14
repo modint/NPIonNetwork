@@ -18,10 +18,11 @@ GC=nx.barabasi_albert_graph(N, kC) #idem ma grado diminuisce per restrizioni
 
 
 #simulazione sui due network di diffusione contagio modello SIR con ic I0
-t, S, I, R= EoN.fast_SIR(GL, beta, gamma, rho=I0)
-t1, S1, I1, R1= EoN.fast_SIR(GC, beta, gamma, rho=I0)
-t2, S2, I2, R2= EoN.fast_SIR(GL, betaC, gamma, rho=I0)
-t3, S3, I3, R3= EoN.fast_SIR(GC, betaC, gamma, rho=I0)
+#La simulazione è fatta con Gillespie_SIR (si veda documentazione EoN). Esistono alternative come fast_SIR
+t, S, I, R= EoN.Gillespie_SIR(GL, beta, gamma, rho=I0)
+t1, S1, I1, R1= EoN.Gillespie_SIR(GC, beta, gamma, rho=I0)
+t2, S2, I2, R2= EoN.Gillespie_SIR(GL, betaC, gamma, rho=I0)
+t3, S3, I3, R3= EoN.Gillespie_SIR(GC, betaC, gamma, rho=I0)
 
 #grafico della simulazione
 
