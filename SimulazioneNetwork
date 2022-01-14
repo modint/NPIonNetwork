@@ -11,7 +11,7 @@ I0= 0.001 #frazione popolazione infettata al tempo zero
 
 beta= 0.4 #transmission rate
 gamma=1.0 #recovery rate
-betaC=0.3
+betaC=0.3 #transmission rate con mascherine etc
 
 GL=nx.barabasi_albert_graph(N, kF)  #crea Grafo Albert Barabasi hp no restrizioni
 GC=nx.barabasi_albert_graph(N, kC) #idem ma grado diminuisce per restrizioni
