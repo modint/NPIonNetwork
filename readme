@@ -1,0 +1,17 @@
+Il codice del progetto è scritto in Python servendosi del pacchetto Epidemics on Network (EoN). 
+
+Qui per un'introduzione (https://arxiv.org/pdf/2001.02436.pdf). 
+
+Dopo aver dato numero totale della popolazione N, condizione iniziale I0, parametri sia del grafo sia del virus, genera due grafi Albert Barabasi (si veda, ad esempio, Network Science di Albert. L. Barabasi). 
+Il primo grafo ha average degree (numero di contatti medio) uguale a 19, il cui valore deriva da Mossong et Al (2015). 
+
+Il secondo grafo ha average degree inferiore. 
+
+Successivamente vengono fatte quattro simulazioni utilizzando algoritmo Gillespie (ma si può benissimo usare anche EoN.fast_SIR dello stesso pacchetto). 
+Le quattro simulazioni comprendono: 
+
+1. Dinamica libera del virus; 
+2. Riduzione dei contatti medi; 
+3. Riduzione della transmission rate con dispotivi di protezione; 
+4. Riduzione dei contatti medi e transmission rate. 
+
